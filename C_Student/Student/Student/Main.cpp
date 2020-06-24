@@ -14,3 +14,17 @@ typedef struct STUDENT
 	int kor, eng, math, sum;
 	double avg;
 }score;
+
+int main(void)
+{
+	FILE* open;
+	score people[100];
+	score total = { "","",0,0,0,0,0 };
+
+	open = fopen("Score.txt","r");
+
+	if (open == NULL) {
+		printf("해당 파일을 찾을 수 없습니다.\n");
+		exit(1); //에러메시지 종료
+	}
+}
